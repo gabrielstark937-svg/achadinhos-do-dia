@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Achadinhos e ofertas selecionadas da Shopee. Encontre produtos interessantes com acesso direto à Shopee.">
+  <title>Achadinhos do Dia | Ofertas Shopee</title>
+  <style>
+    :root{
+      --bg:#fff7f2; --card:#ffffff; --text:#241b18; --muted:#766862;
+      --primary:#ee4d2d; --primary-dark:#c93b20; --line:#f0ddd5;
+      --shadow:0 14px 40px rgba(70,35,20,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,247,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:900;font-size:1.2rem;letter-spacing:-.5px}
+    .brand span{color:var(--primary)}
+    nav .links{display:flex;gap:22px;color:var(--muted);font-weight:700;font-size:.95rem}
+    .hero{padding:72px 0 46px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center}
+    .badge{display:inline-flex;background:#ffe4dc;color:var(--primary-dark);padding:8px 13px;border-radius:999px;font-size:.85rem;font-weight:800}
+    h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:.98;letter-spacing:-3px;margin:18px 0}
+    .hero p{font-size:1.12rem;line-height:1.7;color:var(--muted);max-width:650px}
+    .cta{display:inline-flex;margin-top:14px;background:var(--primary);color:#fff;padding:14px 20px;border-radius:13px;font-weight:900;box-shadow:0 10px 25px rgba(238,77,45,.22)}
+    .cta:hover{background:var(--primary-dark)}
+    .hero-card{background:linear-gradient(145deg,#fff,#ffe9e1);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+    .hero-card .emoji{font-size:4rem}
+    .hero-card h2{margin:14px 0 8px}
+    .hero-card p{font-size:.98rem}
+    section{padding:48px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}
+    .section-head h2{font-size:2rem;margin:0;letter-spacing:-1px}
+    .section-head p{color:var(--muted);margin:0}
+    .tools{display:flex;gap:10px;margin-bottom:22px}
+    input{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:1rem;outline:none}
+    input:focus{border-color:var(--primary)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .product{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .product-top{height:190px;background:linear-gradient(135deg,#fff0eb,#ffe0d6);display:grid;place-items:center;font-size:4.2rem}
+    .product-body{padding:20px;display:flex;flex-direction:column;flex:1}
+    .tag{display:inline-block;width:max-content;background:#fff0eb;color:var(--primary-dark);font-size:.75rem;font-weight:900;padding:6px 9px;border-radius:7px}
+    .product h3{margin:13px 0 8px;font-size:1.15rem}
+    .product p{color:var(--muted);line-height:1.55;margin:0 0 18px}
+    .buy{margin-top:auto;display:flex;justify-content:center;background:var(--primary);color:white;padding:13px;border-radius:11px;font-weight:900}
+    .buy:hover{background:var(--primary-dark)}
+    .empty{display:none;padding:30px;text-align:center;color:var(--muted)}
+    .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .about-box{padding:25px;border:1px solid var(--line);border-radius:18px;background:#fffaf8}
+    .about-box h3{margin-top:0}
+    .about-box p,.about-box li{color:var(--muted);line-height:1.65}
+    footer{padding:30px 0 45px;color:var(--muted);font-size:.9rem}
+    footer strong{color:var(--text)}
+    @media(max-width:800px){
+      nav .links{display:none}
+      .hero{padding-top:45px}
+      .hero-grid,.about-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .hero-card{display:none}
+      h1{letter-spacing:-2px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#"><span>Achadinhos</span> do Dia</a>
+      <div class="links">
+        <a href="#ofertas">Ofertas</a>
+        <a href="#sobre">Como funciona</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">🛍️ Seleção de ofertas da Shopee</span>
+        <h1>Produtos que valem a pena ficar de olho.</h1>
+        <p>Uma seleção simples de achadinhos, utilidades e ofertas interessantes encontradas na Shopee. Clique em um produto para conferir preço, avaliações e condições diretamente na plataforma.</p>
+        <a class="cta" href="#ofertas">Ver ofertas ↓</a>
+      </div>
+      <div class="hero-card">
+        <div class="emoji">🔥🛒</div>
+        <h2>Achou, clicou, conferiu.</h2>
+        <p>Os preços e a disponibilidade podem mudar. Sempre confira os detalhes atualizados no anúncio antes de comprar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ofertas">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Ofertas em destaque</h2>
+          <p>Atualize os produtos e links quando quiser.</p>
+        </div>
+      </div>
+      <div class="tools">
+        <input id="search" type="search" placeholder="🔎 Procurar nesta página...">
+      </div>
+
+      <div class="grid" id="products">
+        <article class="product" data-name="Parafusadeira Furadeira Falasca PF21B2 21V">
+          <div class="product-top">🔧</div>
+          <div class="product-body">
+            <span class="tag">Achadinho</span>
+            <h3>Parafusadeira e Furadeira 21V</h3>
+            <p>Uma opção de entrada para pequenos reparos e tarefas domésticas. Confira o anúncio para ver preço e especificações atuais.</p>
+            <a class="buy" href="https://s.shopee.com.br/3g3GjD0XBY" target="_blank" rel="nofollow sponsored noopener">Ver na Shopee</a>
+          </div>
+        </article>
+
+        <article class="product" data-name="Produto Shopee 2">
+          <div class="product-top">🛒</div>
+          <div class="product-body">
+            <span class="tag">Oferta</span>
+            <h3>Achadinho da Shopee #2</h3>
+            <p>Confira o produto, as avaliações de compradores, o preço e as condições de entrega diretamente no anúncio.</p>
+            <a class="buy" href="https://s.shopee.com.br/80CFt7TVsS" target="_blank" rel="nofollow sponsored noopener">Ver na Shopee</a>
+          </div>
+        </article>
+
+        <article class="product" data-name="Produto Shopee 3">
+          <div class="product-top">✨</div>
+          <div class="product-body">
+            <span class="tag">Oferta</span>
+            <h3>Achadinho da Shopee #3</h3>
+            <p>Veja os detalhes atualizados do produto e aproveite caso a oferta ainda esteja disponível.</p>
+            <a class="buy" href="https://s.shopee.com.br/3g3GjEvSsx" target="_blank" rel="nofollow sponsored noopener">Ver na Shopee</a>
+          </div>
+        </article>
+      </div>
+      <div class="empty" id="empty">Nenhum produto encontrado.</div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="container about-grid">
+      <div class="about-box">
+        <h3>Como funciona?</h3>
+        <ul>
+          <li>Você escolhe um produto que chamou sua atenção.</li>
+          <li>Clica em “Ver na Shopee”.</li>
+          <li>O botão leva você ao anúncio na Shopee para conferir a oferta e comprar, se quiser.</li>
+        </ul>
+      </div>
+      <div class="about-box">
+        <h3>Transparência</h3>
+        <p>Este site participa do Programa de Afiliados da Shopee. Alguns links são links de afiliado e podemos receber uma comissão se uma compra elegível for realizada por meio deles, sem custo adicional para você.</p>
+        <p>Preços, estoque, descontos, avaliações e disponibilidade pertencem à Shopee e podem mudar a qualquer momento.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>Achadinhos do Dia</strong> · Produtos e ofertas selecionadas.
+    <br>Site independente. Não somos a Shopee.
+  </div>
+</footer>
+
+<script>
+  const input = document.getElementById('search');
+  const cards = [...document.querySelectorAll('.product')];
+  const empty = document.getElementById('empty');
+
+  input.addEventListener('input', () => {
+    const q = input.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(card => {
+      const match = card.dataset.name.toLowerCase().includes(q) || card.innerText.toLowerCase().includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    empty.style.display = visible ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
