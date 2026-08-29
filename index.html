@@ -43,6 +43,12 @@
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .product{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
     .product-top{height:190px;background:linear-gradient(135deg,#fff0eb,#ffe0d6);display:grid;place-items:center;font-size:4.2rem}
+    .product-top img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
     .product-body{padding:20px;display:flex;flex-direction:column;flex:1}
     .tag{display:inline-block;width:max-content;background:#fff0eb;color:var(--primary-dark);font-size:.75rem;font-weight:900;padding:6px 9px;border-radius:7px}
     .product h3{margin:13px 0 8px;font-size:1.15rem}
@@ -111,7 +117,9 @@
 
       <div class="grid" id="products">
         <article class="product" data-name="Parafusadeira Furadeira Falasca PF21B2 21V">
-          <div class="product-top">🔧</div>
+          <div class="product-top">
+    <img src="parafusadeira.jfif" alt="Parafusadeira e Furadeira 21V">
+          </div>
           <div class="product-body">
             <span class="tag">Achadinho</span>
             <h3>Parafusadeira e Furadeira 21V</h3>
@@ -121,7 +129,9 @@
         </article>
 
         <article class="product" data-name="KIT 2 Bermuda Shorts Tactel">
-          <div class="product-top">🛒</div>
+          <div class="product-top">
+    <img src="bermudas.jfif" alt="Kit 2 Bermuda Shorts Tactel">
+          </div>
           <div class="product-body">
             <span class="tag">Oferta</span>
             <h3>KIT 2 Bermuda Shorts Tactel</h3>
@@ -131,7 +141,9 @@
         </article>
 
         <article class="product" data-name="kit calças jeans masculina skinny">
-          <div class="product-top">✨</div>
+          <div class="product-top">
+    <img src="calças.jfif" alt="Kit calças jeans masculina skinny">
+</div>
           <div class="product-body">
             <span class="tag">Oferta</span>
             <h3>kit calças jeans masculina skinny</h3>
@@ -141,7 +153,9 @@
         </article>
 
         <article class="product" data-name="Caixinha De Som Bluetooth Potente">
-          <div class="product-top">🔈</div>
+         <div class="product-top">
+    <img src="caixinha de som.jfif" alt="Caixinha de Som Bluetooth Potente">
+</div>
           <div class="product-body">
             <span class="tag">Oferta</span>
             <h3>Caixinha De Som Bluetooth Potente</h3>
