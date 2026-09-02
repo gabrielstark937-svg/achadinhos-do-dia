@@ -79,6 +79,39 @@
       .hero-card{display:none}
       h1{letter-spacing:-2px}
     }
+    /* PAGINAÇÃO */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    border: none;
+    background: #f4512c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.pagination button:hover {
+    opacity: 0.85;
+}
+
+.pagination button.active {
+    background: #222;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
   </style>
 </head>
 <body>
@@ -243,7 +276,7 @@
       <div class="empty" id="empty">Nenhum produto encontrado.</div>
     </div>
   </section>
-
+<div class="pagination" id="pagination"></div>
   <section class="about" id="sobre">
     <div class="container about-grid">
       <div class="about-box">
@@ -286,5 +319,93 @@
     empty.style.display = visible ? 'none' : 'block';
   });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const produtos = document.querySelectorAll(".product");
+    const produtosPorPagina = 8;
+    const pagination = document.getElementById("pagination");
+
+    let paginaAtual = 1;
+
+    const totalPaginas = Math.ceil(produtos.length / produtosPorPagina);
+
+    function mostrarPagina(pagina) {
+
+        paginaAtual = pagina;
+
+        const inicio = (pagina - 1) * produtosPorPagina;
+        const fim = inicio + produtosPorPagina;
+
+        produtos.forEach((produto, index) => {
+            if (index >= inicio && index < fim) {
+                produto.style.display = "";
+            } else {
+                produto.style.display = "none";
+            }
+        });
+
+        criarBotoes();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    function criarBotoes() {
+
+        pagination.innerHTML = "";
+
+        // Botão anterior
+        const anterior = document.createElement("button");
+        anterior.textContent = "‹ Anterior";
+        anterior.disabled = paginaAtual === 1;
+
+        anterior.addEventListener("click", function () {
+            if (paginaAtual > 1) {
+                mostrarPagina(paginaAtual - 1);
+            }
+        });
+
+        pagination.appendChild(anterior);
+
+        // Números das páginas
+        for (let i = 1; i <= totalPaginas; i++) {
+
+            const botao = document.createElement("button");
+
+            botao.textContent = i;
+
+            if (i === paginaAtual) {
+                botao.classList.add("active");
+            }
+
+            botao.addEventListener("click", function () {
+                mostrarPagina(i);
+            });
+
+            pagination.appendChild(botao);
+        }
+
+        // Botão próximo
+        const proximo = document.createElement("button");
+        proximo.textContent = "Próxima ›";
+        proximo.disabled = paginaAtual === totalPaginas;
+
+        proximo.addEventListener("click", function () {
+            if (paginaAtual < totalPaginas) {
+                mostrarPagina(paginaAtual + 1);
+            }
+        });
+
+        pagination.appendChild(proximo);
+    }
+
+    mostrarPagina(1);
+});
+</script>
+
+</body>
 </body>
 </html>
